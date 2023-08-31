@@ -15,7 +15,7 @@
                             <asp:Label ID="LabelNIT" AssociatedControlID="TextBoxNIT" CssClass="form-control-plaintext" runat="server" Text="NIT"></asp:Label>
                         </div>
                         <div class="col-auto">
-                            <asp:TextBox ID="TextBoxNIT" Required="true" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNIT" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="row g-3 mb-4 col-s-12">
@@ -23,7 +23,7 @@
                             <asp:Label ID="LabelNames" AssociatedControlID="TextBoxNames" CssClass="form-control-plaintext" runat="server" Text="Nombres"></asp:Label>
                         </div>
                         <div class="col-auto">
-                            <asp:TextBox ID="TextBoxNames" Required="true" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNames" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="row g-3 mb-4 col-s-12">
@@ -31,7 +31,7 @@
                             <asp:Label ID="LabelLastNames" AssociatedControlID="TextBoxLastNames" CssClass="form-control-plaintext" runat="server" Text="Apellidos"></asp:Label>
                         </div>
                         <div class="col-auto">
-                            <asp:TextBox ID="TextBoxLastNames" Required="true" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxLastNames" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="row g-3 mb-4">
@@ -39,7 +39,7 @@
                             <asp:Label ID="LabelAddress" AssociatedControlID="TextBoxAddress" CssClass="form-control-plaintext" runat="server" Text="Direccion"></asp:Label>
                         </div>
                         <div class="col-auto">
-                            <asp:TextBox ID="TextBoxAddress" Required="true" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxAddress" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="row g-3 mb-4">
@@ -47,7 +47,7 @@
                             <asp:Label ID="LabelNumber" AssociatedControlID="TextBoxPhone" CssClass="form-control-plaintext" runat="server" Text="Telefono"></asp:Label>
                         </div>
                         <div class="col-auto">
-                            <asp:TextBox ID="TextBoxPhone" Required="true" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPhone" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                     </div>
                 </div>

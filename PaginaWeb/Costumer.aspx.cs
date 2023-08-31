@@ -35,11 +35,11 @@ namespace PaginaWeb
 
         private void cleanData()
         {
-            TextBoxNIT.Text = "";
-            TextBoxNames.Text = "";
-            TextBoxLastNames.Text = "";
-            TextBoxAddress.Text = "";
-            TextBoxPhone.Text = "";
+            TextBoxNIT.Text = null;
+            TextBoxNames.Text = null;
+            TextBoxLastNames.Text = null;
+            TextBoxAddress.Text = null;
+            TextBoxPhone.Text = null;
         }
 
         private void writeData(Client client)
@@ -111,5 +111,13 @@ namespace PaginaWeb
 
             return sortDirection;
         }
+
+
+        private void validateEmpty()
+        {
+
+        }
     }
+
+
 }
