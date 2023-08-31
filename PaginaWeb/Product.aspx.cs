@@ -13,5 +13,10 @@ namespace PaginaWeb
         {
 
         }
+
+        protected void ButtonRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

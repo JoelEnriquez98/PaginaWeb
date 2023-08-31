@@ -39,7 +39,7 @@ namespace PaginaWeb
 
             if (!userNameValid)
             {
-                Response.Write("User or password are invalid");
+                Response.Write("<script>alert('Password or Username are incorrect');</script>");
             }
             else
             {
