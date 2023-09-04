@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Runtime;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,10 +28,12 @@ namespace PaginaWeb
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-
-            Client newCostumer = new Client(Convert.ToInt32(TextBoxNIT.Text), TextBoxNames.Text, TextBoxLastNames.Text, TextBoxAddress.Text, Convert.ToInt32(TextBoxPhone.Text));
-            writeData(newCostumer);
-            bindDataTable();
+            if (!validateEmptyTextBoxes())
+            {
+                Client newCostumer = new Client(Convert.ToInt32(TextBoxNIT.Text), TextBoxNames.Text, TextBoxLastNames.Text, TextBoxAddress.Text, Convert.ToInt32(TextBoxPhone.Text));
+                writeData(newCostumer);
+                bindDataTable();
+            }
         }
 
         private void cleanData()
@@ -113,10 +116,24 @@ namespace PaginaWeb
         }
 
 
-        private void validateEmpty()
+        private bool validateEmptyTextBoxes()
         {
-
+            TextBox[] textBoxes = { TextBoxNIT, TextBoxNames, TextBoxLastNames, TextBoxAddress, TextBoxPhone };
+            foreach (TextBox textBox in textBoxes)
+            {
+                if (String.IsNullOrEmpty(textBox.Text))
+                {
+                    textBox.Focus();
+                    Response.Write("<script>alert('Ingrese el dato del: " + textBox.ID + "');</script>");
+                    return true;
+                }
+            }
+            return false;
         }
+
+
+
+
     }
 
 

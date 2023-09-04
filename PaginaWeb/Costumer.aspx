@@ -87,9 +87,13 @@
                             </div>
                         </div>
                     </div>
-                    <asp:GridView ID="GVCostumers" CssClass="table table-bordered table-condensed table-responsive table-hover" runat="server" AllowPaging="True" AllowSorting="true" OnSorting="GVCostumers_Sorting">
+                    <asp:GridView ID="GVCostumers" CssClass="table table-bordered table-condensed table-responsive table-hover" runat="server" AllowPaging="True" AllowSorting="true" OnSorting="GVCostumers_Sorting" AutoGenerateColumns="False">
                         <Columns>
-                            <asp:BoundField DataField="nit" HeaderText="NIT"></asp:BoundField>
+                            <asp:BoundField DataField="nit" HeaderText="NIT" SortExpression="nit"></asp:BoundField>
+                            <asp:BoundField DataField="names" HeaderText="Nombres" SortExpression="names"></asp:BoundField>
+                            <asp:BoundField DataField="last_names" HeaderText="Apellidos" SortExpression="last_names"></asp:BoundField>
+                            <asp:BoundField DataField="address" HeaderText="Direccion" SortExpression="address"></asp:BoundField>
+                            <asp:BoundField DataField="phone" HeaderText="Telefono" SortExpression="phone"></asp:BoundField>
                             <asp:ButtonField Text="Select" ControlStyle-CssClass="btn btn-info" ButtonType="Button"></asp:ButtonField>
                         </Columns>
                     </asp:GridView>
@@ -98,5 +102,4 @@
 
         </div>
     </div>
-
 </asp:Content>
